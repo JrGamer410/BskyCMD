@@ -37,6 +37,15 @@ def main():
                 mute(handle)
             except ValueError:
                 print("Usage: mute <handle>")
+        elif user_input.startswith("unmute"):
+            try:
+                parts = user_input.split(" ")
+                if len(parts) != 2:
+                    raise ValueError
+                handle = parts[1]
+                unmute(handle)
+            except ValueError:
+                print("Usage: unmute <handle>")
         elif user_input == "help":
             print("""
 Commands:
@@ -44,6 +53,7 @@ Commands:
   post <message>                 Post a message to your bluesky account.
   exit                           Exit the CLI.
   mute <handle>                  Mute a user by handle.
+  unmute <handle>                Unmute a user by handle.
             """)
         else:
             print("Command not found. Type 'help' for available commands.")
@@ -62,5 +72,11 @@ def mute(handle):
         print(f"Muted {handle} successfully!")
     except Exception as e :
         print(f"Failed to mute {handle}: {e}")
+def unmute(handle):
+    try :
+        client.unmute(handle)
+        print(f"Unuted {handle} successfully!")
+    except Exception as e :
+        print(f"Failed to unmute {handle}: {e}")
 if __name__ == "__main__":
     main()
