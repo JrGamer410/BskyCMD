@@ -3,7 +3,7 @@
 # Installation (.py file)
  Requires Python, but works on all platforms
  1. Download the .py file from the Releases section and save it somewhere.
- 2. If you haven't installed the atproto python library, run ``py install atproto``
+ 2. If you haven't installed the atproto python library, run ``pip install atproto``
  3. Run the .py file
 # Installation (.exe file)
 Doesn't require Python, but only works on newer versions of Windows
