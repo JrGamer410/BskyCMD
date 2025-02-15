@@ -1,11 +1,12 @@
 # BskyCMD
  A CLI app that allows you to interact with the Bluesky API.
-# Installation
- .py file (Requires Python, but works on all platforms):
+# Installation (.py file)
+ Requires Python, but works on all platforms
  1. Download the .py file from the Releases section and save it somewhere.
  2. If you haven't installed the atproto python library, run ``py install atproto``
  3. Run the .py file
- .exe file (Doesn't require Python, but only works on newer versions of Windows):
+# Installation (.exe file)
+Doesn't require Python, but only works on newer versions of Windows
  1. Download the .exe file from the Release section and save it somewhere.
  2. Run the .exe file
 # Usage
