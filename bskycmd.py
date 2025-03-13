@@ -75,7 +75,7 @@ def mute(handle):
 def unmute(handle):
     try :
         client.unmute(handle)
-        print(f"Unuted {handle} successfully!")
+        print(f"Unmuted {handle} successfully!")
     except Exception as e :
         print(f"Failed to unmute {handle}: {e}")
 if __name__ == "__main__":
