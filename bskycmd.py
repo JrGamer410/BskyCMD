@@ -1,5 +1,6 @@
 from atproto import Client, client_utils
 client = Client()
+
 def main():
     print("Welcome to BskyCMD!")
     print("Type 'help' for a list of commands.")
@@ -54,29 +55,37 @@ Commands:
   exit                           Exit the CLI.
   mute <handle>                  Mute a user by handle.
   unmute <handle>                Unmute a user by handle.
+  like <user> <post_id>          Like a post by user and post ID.
             """)
         else:
             print("Command not found. Type 'help' for available commands.")
+
 def login(username, password):
     profile = client.login(username, password)
     print('Signed in to', profile.display_name)
+
 def post(message):
     try:
         client.send_post(text=message)
         print('Sent message successfully!')
     except Exception as e:
         print(f"Failed to post: {e}")
+
 def mute(handle):
-    try :
+    try:
         client.mute(handle)
         print(f"Muted {handle} successfully!")
-    except Exception as e :
+    except Exception as e:
         print(f"Failed to mute {handle}: {e}")
+
 def unmute(handle):
-    try :
+    try:
         client.unmute(handle)
         print(f"Unmuted {handle} successfully!")
-    except Exception as e :
+    except Exception as e:
         print(f"Failed to unmute {handle}: {e}")
+
+
+
 if __name__ == "__main__":
     main()
